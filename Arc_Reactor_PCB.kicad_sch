@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "Arc Reactor PCB")
-		(date "2026-10-16")
+		(date "2026-10-18")
 		(rev "Rev A")
 		(company "MKAT Labs")
 		(comment 1 "Author: Manasva Katyal")
@@ -2059,6 +2059,160 @@
 				)
 			)
 			(symbol "SMAJ18A_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Diode:SMAJ5.0A"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SMAJ5.0A"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_SMD:D_SMA"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=75e32973-b177-4ee3-a0ff-cedaf1abdb93&filename=smaj-datasheet"
+				(at -1.27 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "400W unidirectional Transient Voltage Suppressor, 5.0Vr, SMA(DO-214AC)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "unidirectional diode TVS voltage suppressor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "D*SMA*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SMAJ5.0A_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SMAJ5.0A_1_1"
 				(pin passive line
 					(at -3.81 0 0)
 					(length 2.54)
@@ -4845,6 +4999,18 @@
 		(uuid "995b13aa-be03-4f5f-b679-e746a3f99719")
 	)
 	(rectangle
+		(start 139.7 24.13)
+		(end 157.48 49.53)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "a01bbecf-5f2b-4469-9e0e-8ae07c71dfff")
+	)
+	(rectangle
 		(start 138.43 120.65)
 		(end 209.55 162.56)
 		(stroke
@@ -5015,10 +5181,16 @@
 		(uuid "03e8415c-c62f-454d-9b6c-138231635971")
 	)
 	(junction
-		(at 181.61 46.99)
+		(at 184.15 46.99)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "04300634-ecdd-497d-9005-42e899af9f50")
+	)
+	(junction
+		(at 163.83 58.42)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "05621fc5-283f-4696-b46d-333f85224f84")
 	)
 	(junction
 		(at 246.38 97.79)
@@ -5057,7 +5229,7 @@
 		(uuid "25f787d3-1b8c-4e1d-81e7-9be67b3c1b5f")
 	)
 	(junction
-		(at 198.12 67.31)
+		(at 200.66 67.31)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2e83c268-b27b-4290-95e0-6a6fe425c08f")
@@ -5117,12 +5289,6 @@
 		(uuid "5cdf6345-912e-4117-add6-fe3d0c3dd55a")
 	)
 	(junction
-		(at 158.75 58.42)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5f4902ac-b815-4766-8d4d-6849272209d8")
-	)
-	(junction
 		(at 88.9 168.91)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5153,7 +5319,7 @@
 		(uuid "78a47bc8-5e36-4b35-acb3-86a00ed7b43a")
 	)
 	(junction
-		(at 179.07 25.4)
+		(at 181.61 25.4)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "799f7ace-9d34-4808-b2a5-8a1c0874ba13")
@@ -5195,7 +5361,7 @@
 		(uuid "a0d283d5-2465-4d17-b06f-dcdf501ba818")
 	)
 	(junction
-		(at 181.61 41.91)
+		(at 184.15 41.91)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a0e67420-7f62-4ea4-b80b-a9ec1833877f")
@@ -5293,7 +5459,7 @@
 		(uuid "18ff41f2-dc49-4154-8026-5996b3215d15")
 	)
 	(no_connect
-		(at 182.88 55.88)
+		(at 185.42 55.88)
 		(uuid "37f089cf-2af4-405a-adbb-46166704f11a")
 	)
 	(no_connect
@@ -5313,7 +5479,7 @@
 		(uuid "9968df51-feaf-4dcf-9d9e-76a3d5b2f29d")
 	)
 	(no_connect
-		(at 182.88 58.42)
+		(at 185.42 58.42)
 		(uuid "9b13535a-7691-4bb1-a92b-9f17cc84af03")
 	)
 	(no_connect
@@ -5360,7 +5526,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 43.18) (xy 181.61 43.18)
+			(xy 185.42 43.18) (xy 184.15 43.18)
 		)
 		(stroke
 			(width 0)
@@ -5390,13 +5556,23 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 35.56) (xy 162.56 49.53)
+			(xy 167.64 35.56) (xy 167.64 49.53)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "06e7cb2e-3b2d-4bd0-8595-372120031472")
+	)
+	(wire
+		(pts
+			(xy 163.83 58.42) (xy 167.64 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "073c9012-072c-43b7-910f-45eb85b47a37")
 	)
 	(wire
 		(pts
@@ -5470,7 +5646,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 33.02) (xy 158.75 33.02)
+			(xy 185.42 33.02) (xy 163.83 33.02)
 		)
 		(stroke
 			(width 0)
@@ -5480,7 +5656,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 40.64) (xy 181.61 40.64)
+			(xy 185.42 40.64) (xy 184.15 40.64)
 		)
 		(stroke
 			(width 0)
@@ -5527,6 +5703,16 @@
 			(type default)
 		)
 		(uuid "1ce9d78e-49b8-480d-8e42-75ddcae8e3a5")
+	)
+	(wire
+		(pts
+			(xy 163.83 58.42) (xy 163.83 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ddc02c8-29f0-458c-bb00-9c36478eab0b")
 	)
 	(wire
 		(pts
@@ -5680,16 +5866,6 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 58.42) (xy 158.75 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "373b2cf1-56d5-4858-b2c9-f0e0434f5e30")
-	)
-	(wire
-		(pts
 			(xy 252.73 29.21) (xy 252.73 31.75)
 		)
 		(stroke
@@ -5800,7 +5976,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 25.4) (xy 179.07 25.4)
+			(xy 180.34 25.4) (xy 181.61 25.4)
 		)
 		(stroke
 			(width 0)
@@ -5940,6 +6116,16 @@
 	)
 	(wire
 		(pts
+			(xy 152.4 31.75) (xy 152.4 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f3a9794-25c1-45b5-b48e-96d177be7dbd")
+	)
+	(wire
+		(pts
 			(xy 96.52 50.8) (xy 111.76 50.8)
 		)
 		(stroke
@@ -5960,7 +6146,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 46.99) (xy 181.61 46.99)
+			(xy 170.18 46.99) (xy 184.15 46.99)
 		)
 		(stroke
 			(width 0)
@@ -5970,7 +6156,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 48.26) (xy 181.61 48.26)
+			(xy 185.42 48.26) (xy 184.15 48.26)
 		)
 		(stroke
 			(width 0)
@@ -6000,7 +6186,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 57.15) (xy 162.56 58.42)
+			(xy 167.64 57.15) (xy 167.64 58.42)
 		)
 		(stroke
 			(width 0)
@@ -6020,7 +6206,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 41.91) (xy 167.64 41.91)
+			(xy 184.15 41.91) (xy 170.18 41.91)
 		)
 		(stroke
 			(width 0)
@@ -6050,7 +6236,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 57.15) (xy 158.75 58.42)
+			(xy 163.83 57.15) (xy 163.83 58.42)
 		)
 		(stroke
 			(width 0)
@@ -6090,7 +6276,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 67.31) (xy 205.74 67.31)
+			(xy 200.66 67.31) (xy 208.28 67.31)
 		)
 		(stroke
 			(width 0)
@@ -6310,7 +6496,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 25.4) (xy 179.07 27.94)
+			(xy 181.61 25.4) (xy 181.61 27.94)
 		)
 		(stroke
 			(width 0)
@@ -6320,13 +6506,23 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 33.02) (xy 158.75 49.53)
+			(xy 163.83 33.02) (xy 163.83 49.53)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "8b51bb99-138c-4934-9d62-eed3ea34b3b0")
+	)
+	(wire
+		(pts
+			(xy 152.4 41.91) (xy 152.4 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8bf72488-d558-46b8-aa39-bfb77f059cf2")
 	)
 	(wire
 		(pts
@@ -6440,7 +6636,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 43.18) (xy 181.61 41.91)
+			(xy 184.15 43.18) (xy 184.15 41.91)
 		)
 		(stroke
 			(width 0)
@@ -6490,7 +6686,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 45.72) (xy 182.88 45.72)
+			(xy 184.15 45.72) (xy 185.42 45.72)
 		)
 		(stroke
 			(width 0)
@@ -6680,7 +6876,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 24.13) (xy 179.07 25.4)
+			(xy 181.61 24.13) (xy 181.61 25.4)
 		)
 		(stroke
 			(width 0)
@@ -6760,7 +6956,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 46.99) (xy 181.61 45.72)
+			(xy 184.15 46.99) (xy 184.15 45.72)
 		)
 		(stroke
 			(width 0)
@@ -6820,7 +7016,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 48.26) (xy 181.61 46.99)
+			(xy 184.15 48.26) (xy 184.15 46.99)
 		)
 		(stroke
 			(width 0)
@@ -6840,7 +7036,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 27.94) (xy 182.88 27.94)
+			(xy 181.61 27.94) (xy 185.42 27.94)
 		)
 		(stroke
 			(width 0)
@@ -6910,16 +7106,6 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 58.42) (xy 158.75 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ccb72a8e-e8d2-4c54-8d42-f2b85010e5c3")
-	)
-	(wire
-		(pts
 			(xy 30.48 85.09) (xy 30.48 86.36)
 		)
 		(stroke
@@ -6960,7 +7146,7 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 66.04) (xy 205.74 67.31)
+			(xy 208.28 66.04) (xy 208.28 67.31)
 		)
 		(stroke
 			(width 0)
@@ -6970,7 +7156,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 67.31) (xy 198.12 68.58)
+			(xy 200.66 67.31) (xy 200.66 68.58)
 		)
 		(stroke
 			(width 0)
@@ -6980,7 +7166,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 35.56) (xy 162.56 35.56)
+			(xy 185.42 35.56) (xy 167.64 35.56)
 		)
 		(stroke
 			(width 0)
@@ -7050,7 +7236,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 40.64) (xy 181.61 41.91)
+			(xy 184.15 40.64) (xy 184.15 41.91)
 		)
 		(stroke
 			(width 0)
@@ -7160,7 +7346,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 66.04) (xy 198.12 67.31)
+			(xy 200.66 66.04) (xy 200.66 67.31)
 		)
 		(stroke
 			(width 0)
@@ -7329,7 +7515,7 @@
 		(uuid "4fd4e776-38cc-4e6e-91dd-c3ddfbeb2710")
 	)
 	(label "MCU_USB_D-"
-		(at 167.64 41.91 0)
+		(at 170.18 41.91 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7369,7 +7555,7 @@
 		(uuid "7b603217-a483-431c-80f8-9c711161696c")
 	)
 	(label "USB_CC1"
-		(at 170.18 33.02 0)
+		(at 172.72 33.02 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7479,7 +7665,7 @@
 		(uuid "f1d0cf2e-f5ae-40f6-bfa9-6ff44971df6e")
 	)
 	(label "USB_CC2"
-		(at 170.18 35.56 0)
+		(at 172.72 35.56 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7489,7 +7675,7 @@
 		(uuid "f777f7a5-bbd1-4530-9fc6-157ff8c7d93c")
 	)
 	(label "MCU_USB_D+"
-		(at 167.64 46.99 0)
+		(at 170.18 46.99 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7510,7 +7696,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0155cc95-9393-4203-a82e-c0028e5eb821")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR09"
 			(at 120.65 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -7570,7 +7756,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR08")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -7578,7 +7764,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 158.75 53.34 0)
+		(at 163.83 53.34 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -7589,7 +7775,7 @@
 		(dnp no)
 		(uuid "01da05bc-1e83-4a5c-a686-56863382268a")
 		(property "Reference" "R2"
-			(at 156.21 52.0699 0)
+			(at 161.29 52.0699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7600,7 +7786,7 @@
 			)
 		)
 		(property "Value" "5.1k"
-			(at 156.21 54.6099 0)
+			(at 161.29 54.6099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7611,7 +7797,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 160.528 53.34 90)
+			(at 165.608 53.34 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7622,7 +7808,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 158.75 53.34 0)
+			(at 163.83 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7633,7 +7819,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 158.75 53.34 0)
+			(at 163.83 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7644,7 +7830,7 @@
 			)
 		)
 		(property "LCSC" "C23186"
-			(at 158.75 53.34 0)
+			(at 163.83 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7681,7 +7867,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "02bf8bd5-08ec-4f29-b43c-5942fcfd3fd2")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR023"
 			(at 67.31 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -7741,7 +7927,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR021")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -7759,7 +7945,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "06b218a2-26d6-4fa2-a4cb-dcc7707aaefc")
-		(property "Reference" "#PWR032"
+		(property "Reference" "#PWR034"
 			(at 232.41 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -7819,7 +8005,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR032")
+					(reference "#PWR034")
 					(unit 1)
 				)
 			)
@@ -7930,7 +8116,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0ef71983-71c1-457d-a287-d39a22b8c099")
-		(property "Reference" "#PWR034"
+		(property "Reference" "#PWR036"
 			(at 35.56 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -7990,7 +8176,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR034")
+					(reference "#PWR036")
 					(unit 1)
 				)
 			)
@@ -7998,7 +8184,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 177.8 25.4 90)
+		(at 180.34 25.4 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8009,7 +8195,7 @@
 		(fields_autoplaced yes)
 		(uuid "16b070bd-2ac2-46f6-9253-f025268127ce")
 		(property "Reference" "#FLG01"
-			(at 175.895 25.4 0)
+			(at 178.435 25.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8020,7 +8206,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 173.99 25.3999 90)
+			(at 176.53 25.3999 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8031,7 +8217,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 177.8 25.4 0)
+			(at 180.34 25.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8042,7 +8228,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 177.8 25.4 0)
+			(at 180.34 25.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8053,7 +8239,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 177.8 25.4 0)
+			(at 180.34 25.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8179,7 +8365,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "17af61b8-ca93-4275-9adb-dc8d87000fe2")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR027"
 			(at 163.83 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -8240,7 +8426,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR025")
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -8445,7 +8631,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1b965bcd-7b86-4de4-a14e-7190396c1a0c")
-		(property "Reference" "#PWR031"
+		(property "Reference" "#PWR033"
 			(at 261.62 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -8505,7 +8691,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR031")
+					(reference "#PWR033")
 					(unit 1)
 				)
 			)
@@ -8523,7 +8709,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1dae4f6e-3775-42b8-895d-dc547cf42a02")
-		(property "Reference" "#PWR035"
+		(property "Reference" "#PWR037"
 			(at 115.57 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -8583,7 +8769,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR035")
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -8600,7 +8786,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "20d90499-d300-4211-9801-c0fbbca150ae")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR019"
 			(at 30.48 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -8660,7 +8846,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR017")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -8849,7 +9035,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2baab22f-edb4-45d4-9a20-d1a6608b7504")
-		(property "Reference" "#PWR028"
+		(property "Reference" "#PWR030"
 			(at 115.57 143.51 0)
 			(hide yes)
 			(show_name no)
@@ -8909,7 +9095,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR028")
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -9004,7 +9190,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "330e4e60-b2e3-4c57-8eec-520ea8bb5084")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR016"
 			(at 177.8 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -9064,7 +9250,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR014")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -9176,7 +9362,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "440b8d74-1bc7-4b4c-a8b1-99a31b883606")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR021"
 			(at 246.38 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -9236,7 +9422,85 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR019")
+					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VBUS")
+		(at 152.4 31.75 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "440f31f2-e5a1-4882-b6f3-9cfa3af5f3f9")
+		(property "Reference" "#PWR04"
+			(at 152.4 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "USB_5V"
+			(at 152.4 26.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VBUS\""
+			(at 152.4 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5c4eaa96-b80d-4e36-b6fa-427a1213879d")
+		)
+		(instances
+			(project "Arc_Reactor_PCB"
+				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -9254,7 +9518,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "44b9fd7d-1994-4d84-bc6e-a06fbf0f91ca")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR06"
 			(at 50.8 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -9314,7 +9578,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR05")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -9332,7 +9596,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "47fad689-78f6-4df2-b878-0d512eaf4f1e")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR022"
 			(at 88.9 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -9392,7 +9656,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR020")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -9501,7 +9765,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4fcc3aa7-1f41-4140-a51c-4724be7a5cb6")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR013"
 			(at 255.27 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -9561,7 +9825,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR011")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -9690,7 +9954,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "51ed889e-5a32-4918-b3ff-f1169514c9f3")
-		(property "Reference" "#PWR036"
+		(property "Reference" "#PWR038"
 			(at 35.56 194.31 0)
 			(hide yes)
 			(show_name no)
@@ -9750,7 +10014,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR036")
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -9850,7 +10114,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 162.56 53.34 0)
+		(at 167.64 53.34 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9860,7 +10124,7 @@
 		(dnp no)
 		(uuid "537846aa-2b7b-41fa-b8cc-faa0d3c53239")
 		(property "Reference" "R3"
-			(at 165.1 52.0699 0)
+			(at 170.18 52.0699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9871,7 +10135,7 @@
 			)
 		)
 		(property "Value" "5.1k"
-			(at 165.1 54.6099 0)
+			(at 170.18 54.6099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9882,7 +10146,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 160.782 53.34 90)
+			(at 165.862 53.34 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9893,7 +10157,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 53.34 0)
+			(at 167.64 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9904,7 +10168,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 162.56 53.34 0)
+			(at 167.64 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9915,7 +10179,7 @@
 			)
 		)
 		(property "LCSC" "C23186"
-			(at 162.56 53.34 0)
+			(at 167.64 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9952,7 +10216,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "53b0ec53-0f37-4b6c-a229-0dfe0a5f24dc")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR024"
 			(at 88.9 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -10012,7 +10276,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR022")
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -10030,7 +10294,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5bd93b6f-519a-462f-8081-df10e298ea2c")
-		(property "Reference" "#PWR033"
+		(property "Reference" "#PWR035"
 			(at 162.56 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -10090,7 +10354,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR033")
+					(reference "#PWR035")
 					(unit 1)
 				)
 			)
@@ -10433,7 +10697,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5eebcc0e-7ba6-45ad-9701-731d77d2cbb2")
-		(property "Reference" "D4"
+		(property "Reference" "D5"
 			(at 73.66 143.4398 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10514,7 +10778,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "D4")
+					(reference "D5")
 					(unit 1)
 				)
 			)
@@ -10531,7 +10795,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6655c119-9bfb-4e00-b52f-d578bf6c2d7b")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR026"
 			(at 44.45 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -10591,7 +10855,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR024")
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -10609,7 +10873,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6af5fdb1-ce7e-4554-bc0c-79d10abd95c8")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR025"
 			(at 189.23 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -10669,7 +10933,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR023")
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
@@ -10687,7 +10951,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6b6cc4e4-fc25-4b7e-97d3-65afcf60072c")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR020"
 			(at 177.8 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -10747,7 +11011,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR018")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -10843,7 +11107,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "70d98009-3063-4580-afea-28936e7f4ee9")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR08"
 			(at 245.11 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -10904,7 +11168,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR06")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -10922,7 +11186,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "71f19d4f-8df3-4efa-88d5-90e977fc7f7f")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR017"
 			(at 246.38 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -10982,7 +11246,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR015")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -10990,7 +11254,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 158.75 59.69 0)
+		(at 163.83 59.69 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11000,8 +11264,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7409ced7-5733-4185-aadd-e718f0a439cd")
-		(property "Reference" "#PWR010"
-			(at 158.75 66.04 0)
+		(property "Reference" "#PWR011"
+			(at 163.83 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11012,7 +11276,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 158.75 64.77 0)
+			(at 163.83 64.77 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11022,7 +11286,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 158.75 59.69 0)
+			(at 163.83 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11033,7 +11297,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 158.75 59.69 0)
+			(at 163.83 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11044,7 +11308,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 158.75 59.69 0)
+			(at 163.83 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11060,7 +11324,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR010")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -11078,7 +11342,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "77249bc7-2084-48ea-b961-4e66ed7c1408")
-		(property "Reference" "#PWR029"
+		(property "Reference" "#PWR031"
 			(at 163.83 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -11139,7 +11403,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR029")
+					(reference "#PWR031")
 					(unit 1)
 				)
 			)
@@ -11147,7 +11411,7 @@
 	)
 	(symbol
 		(lib_id "Connector:USB_C_Receptacle_USB2.0_16P")
-		(at 198.12 43.18 0)
+		(at 200.66 43.18 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -11159,7 +11423,7 @@
 		(fields_autoplaced yes)
 		(uuid "77b9aac4-7212-47ec-8a1c-472e9f4119fe")
 		(property "Reference" "J3"
-			(at 209.55 41.9099 0)
+			(at 212.09 41.9099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11170,7 +11434,7 @@
 			)
 		)
 		(property "Value" "USB_C_Receptacle"
-			(at 209.55 44.4499 0)
+			(at 212.09 44.4499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11181,7 +11445,7 @@
 			)
 		)
 		(property "Footprint" "Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12"
-			(at 194.31 43.18 0)
+			(at 196.85 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11192,7 +11456,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip"
-			(at 194.31 43.18 0)
+			(at 196.85 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11203,7 +11467,7 @@
 			)
 		)
 		(property "Description" "USB 2.0-only 16P Type-C Receptacle connector"
-			(at 198.12 43.18 0)
+			(at 200.66 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11214,7 +11478,7 @@
 			)
 		)
 		(property "LCSC" "C2765186"
-			(at 198.12 43.18 0)
+			(at 200.66 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11484,7 +11748,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8168a301-a139-488c-95de-62e2ac0e3f02")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR05"
 			(at 35.56 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -11544,7 +11808,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR04")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -11732,7 +11996,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "84814181-2ff0-4c7d-8cf8-7cfdb3c67ccc")
-		(property "Reference" "D8"
+		(property "Reference" "D9"
 			(at 73.66 171.3798 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11813,7 +12077,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "D8")
+					(reference "D9")
 					(unit 1)
 				)
 			)
@@ -11922,7 +12186,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "89c951c4-d2e4-43b2-937d-d7532287d18d")
-		(property "Reference" "D5"
+		(property "Reference" "D6"
 			(at 100.33 143.4398 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12003,7 +12267,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "D5")
+					(reference "D6")
 					(unit 1)
 				)
 			)
@@ -12406,7 +12670,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9953ef97-97c6-418e-aba4-a13b25f601ac")
-		(property "Reference" "D9"
+		(property "Reference" "D10"
 			(at 100.33 171.3798 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12487,7 +12751,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "D9")
+					(reference "D10")
 					(unit 1)
 				)
 			)
@@ -12505,7 +12769,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9f345d69-b643-4c4e-9de5-5ddbca1f7fcd")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR028"
 			(at 261.62 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -12565,7 +12829,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR026")
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -12582,7 +12846,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a38a0ae3-a2b7-44eb-b670-453f660c9db6")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR012"
 			(at 35.56 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -12638,6 +12902,84 @@
 		)
 		(pin "1"
 			(uuid "68709e19-c4f5-4a2d-913b-c9709454aa63")
+		)
+		(instances
+			(project "Arc_Reactor_PCB"
+				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 152.4 41.91 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a7693d38-9da9-4bf1-997c-374107896d19")
+		(property "Reference" "#PWR07"
+			(at 152.4 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 152.4 46.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 152.4 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c0bad8ba-b0fd-40b2-9284-c7a2db82f755")
 		)
 		(instances
 			(project "Arc_Reactor_PCB"
@@ -12928,7 +13270,7 @@
 	)
 	(symbol
 		(lib_id "power:VBUS")
-		(at 179.07 24.13 0)
+		(at 181.61 24.13 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12939,7 +13281,7 @@
 		(fields_autoplaced yes)
 		(uuid "b1c41e40-ff48-46c0-9c0d-94e00bd7b70a")
 		(property "Reference" "#PWR02"
-			(at 179.07 27.94 0)
+			(at 181.61 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12950,7 +13292,7 @@
 			)
 		)
 		(property "Value" "USB_5V"
-			(at 179.07 19.05 0)
+			(at 181.61 19.05 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12960,7 +13302,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 179.07 24.13 0)
+			(at 181.61 24.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12971,7 +13313,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 179.07 24.13 0)
+			(at 181.61 24.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12982,7 +13324,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VBUS\""
-			(at 179.07 24.13 0)
+			(at 181.61 24.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13302,7 +13644,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c5ca25c7-6d9d-4d1f-8de4-b889e4985160")
-		(property "Reference" "D10"
+		(property "Reference" "D11"
 			(at 127 171.3798 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13383,7 +13725,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "D10")
+					(reference "D11")
 					(unit 1)
 				)
 			)
@@ -13401,7 +13743,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c80f3aea-7b8d-466d-b026-356e92113bb9")
-		(property "Reference" "D6"
+		(property "Reference" "D7"
 			(at 127 143.4398 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13482,7 +13824,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "D6")
+					(reference "D7")
 					(unit 1)
 				)
 			)
@@ -13672,7 +14014,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cf2a33b6-aa74-425d-8ba3-1857be066251")
-		(property "Reference" "D3"
+		(property "Reference" "D4"
 			(at 46.99 143.4398 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13753,7 +14095,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "D3")
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -13852,6 +14194,98 @@
 		)
 	)
 	(symbol
+		(lib_id "Diode:SMAJ5.0A")
+		(at 152.4 36.83 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "dddd373c-dca4-4a66-9df6-44fbc7988fcd")
+		(property "Reference" "D2"
+			(at 149.86 35.5599 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "SMAJ5.0A"
+			(at 149.86 38.0999 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 147.32 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=75e32973-b177-4ee3-a0ff-cedaf1abdb93&filename=smaj-datasheet"
+			(at 152.4 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "400W unidirectional Transient Voltage Suppressor, 5.0Vr, SMA(DO-214AC)"
+			(at 152.4 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C83329"
+			(at 152.4 36.83 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c6b82fe7-00d9-4215-b4db-0207b98e9bfb")
+		)
+		(pin "2"
+			(uuid "9b103a07-1cab-4fb2-8977-48be2ceb9b73")
+		)
+		(instances
+			(project "Arc_Reactor_PCB"
+				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 189.23 151.13 0)
 		(unit 1)
@@ -13863,7 +14297,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "defdc8d3-82f3-4872-94eb-314498d43c57")
-		(property "Reference" "#PWR030"
+		(property "Reference" "#PWR032"
 			(at 189.23 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -13923,7 +14357,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR030")
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
@@ -13941,7 +14375,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e913af57-021f-4d88-885e-f2ef9fed1c31")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR029"
 			(at 232.41 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -14001,7 +14435,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR027")
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)
@@ -14019,7 +14453,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ec51e481-ea3f-4c49-a680-3234ac3cff54")
-		(property "Reference" "D2"
+		(property "Reference" "D3"
 			(at 100.33 116.7698 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14100,7 +14534,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "D2")
+					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -14118,7 +14552,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ecca03ad-8199-4a36-96b5-09112bcdeab2")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR018"
 			(at 68.58 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -14178,7 +14612,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR016")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -14186,7 +14620,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 198.12 68.58 0)
+		(at 200.66 68.58 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14196,8 +14630,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f1d06a6a-4ee5-49ba-bb2a-667210c9fdaf")
-		(property "Reference" "#PWR012"
-			(at 198.12 74.93 0)
+		(property "Reference" "#PWR014"
+			(at 200.66 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14208,7 +14642,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 198.12 73.66 0)
+			(at 200.66 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14218,7 +14652,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 198.12 68.58 0)
+			(at 200.66 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14229,7 +14663,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 198.12 68.58 0)
+			(at 200.66 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14240,7 +14674,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 198.12 68.58 0)
+			(at 200.66 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14256,7 +14690,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR012")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -14274,7 +14708,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f20116f5-b8ff-49c9-a8b5-6060fc4ed656")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR010"
 			(at 129.54 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -14334,7 +14768,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR09")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -14445,7 +14879,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f99f8230-b418-410d-9306-a8ae24a960a6")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR015"
 			(at 30.48 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -14505,7 +14939,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "#PWR013")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -14523,7 +14957,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ffd97d16-7cb2-4ffe-a86b-d873e1c420b8")
-		(property "Reference" "D7"
+		(property "Reference" "D8"
 			(at 46.99 171.3798 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14604,7 +15038,7 @@
 		(instances
 			(project "Arc_Reactor_PCB"
 				(path "/be730e2d-e34f-4d2b-856c-2c3f295a1ee8"
-					(reference "D7")
+					(reference "D8")
 					(unit 1)
 				)
 			)
