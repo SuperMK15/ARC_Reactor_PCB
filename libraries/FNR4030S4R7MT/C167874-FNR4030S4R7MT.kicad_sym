@@ -1,7 +1,7 @@
 (kicad_symbol_lib
   (version 20211014)
   (generator "Easy ECAD Downloader")
-  (symbol "SWPA4030S4R7MT"
+  (symbol "FNR4030S4R7MT"
     (in_bom yes)
     (on_board yes)
     (property
@@ -13,57 +13,57 @@
   )
     (property
     "Value"
-    "SWPA4030S4R7MT"
+    "FNR4030S4R7MT"
     (id 1)
     (at 0 -5.08 0)
     (effects (font (size 1.27 1.27) ) )
   )
     (property
     "Footprint"
-    "IND-SMD_L4.0-W4.0"
+    "IND-SMD_L4.0-W4.0_FNR40XXS"
     (id 2)
     (at 0 -7.62 0)
     (effects (font (size 1.27 1.27) ) hide)
   )
     (property
     "Datasheet"
-    "https://lcsc.com/product-detail/Power-Inductors_4-7uH-20_C57269.html"
+    "https://lcsc.com/product-detail/Power-Inductors_4-7uH-20-2-0A_C167874.html"
     (id 3)
     (at 0 -10.16 0)
     (effects (font (size 1.27 1.27) ) hide)
   )
     (property
     "LCSC Part"
-    "C57269"
+    "C167874"
     (id 5)
     (at 0 -12.70 0)
     (effects (font (size 1.27 1.27) ) hide)
   )
-    (symbol "SWPA4030S4R7MT_0_1"
+    (symbol "FNR4030S4R7MT_0_1"
           (arc
             (start -4.29 0.02)
-            (mid -3.08 -0.88)
+            (mid -3.09 -0.89)
             (end -2.27 0.02)
             (stroke (width 0) (type default) (color 0 0 0 0))
             (fill (type background))
           )
           (arc
             (start -2.13 0.02)
-            (mid -0.92 -0.88)
+            (mid -0.94 -0.89)
             (end -0.11 0.02)
             (stroke (width 0) (type default) (color 0 0 0 0))
             (fill (type background))
           )
           (arc
             (start 0.02 0.02)
-            (mid 1.23 -0.88)
+            (mid 1.21 -0.89)
             (end 2.04 0.02)
             (stroke (width 0) (type default) (color 0 0 0 0))
             (fill (type background))
           )
           (arc
             (start 2.21 0.02)
-            (mid 3.39 -0.90)
+            (mid 3.41 -0.89)
             (end 4.23 0.02)
             (stroke (width 0) (type default) (color 0 0 0 0))
             (fill (type background))
