@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ARC REACTOR HUD</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="hud-header">
+        <h1>ARC REACTOR</h1>
+        <span class="status-badge" id="connText">LINKING</span>
+    </header>
+
+    <main class="hud-container">
+        <!-- VISUALIZER WITH SPINNING RETICLES -->
+        <div class="panel center-panel">
+            <div class="reactor-wrap">
+                <svg viewBox="0 0 260 260" class="reactor-svg">
+                    <circle cx="130" cy="130" r="118" class="reticle-outer" />
+                    <circle cx="130" cy="130" r="96" class="reticle-mid" />
+                    <circle cx="130" cy="130" r="50" class="reticle-inner" />
+                    
+                    <!-- Outer 8 LEDs (D4 to D11) -->
+                    <circle id="led-1" cx="160" cy="58" r="10" class="led" />
+                    <circle id="led-2" cx="202" cy="100" r="10" class="led" />
+                    <circle id="led-3" cx="202" cy="160" r="10" class="led" />
+                    <circle id="led-4" cx="160" cy="202" r="10" class="led" />
+                    <circle id="led-5" cx="100" cy="202" r="10" class="led" />
+                    <circle id="led-6" cx="58" cy="160" r="10" class="led" />
+                    <circle id="led-7" cx="58" cy="100" r="10" class="led" />
+                    <circle id="led-8" cx="100" cy="58" r="10" class="led" />
+                    
+                    <!-- Center Core LED (D3) -->
+                    <circle id="led-0" cx="130" cy="130" r="22" class="led core" />
+                </svg>
+            </div>
+
+            <div class="action-row">
+                <button class="btn btn-unibeam" id="btnUnibeam">⚡ UNIBEAM</button>
+                <button class="btn btn-power active" id="btnPower">PWR</button>
+            </div>
+        </div>
+
+        <!-- MODES -->
+        <div class="panel">
+            <div class="panel-title">ANIMATION MODES</div>
+            <div class="mode-grid">
+                <button class="mode-btn active" data-mode="0">Classic</button>
+                <button class="mode-btn" data-mode="1">Turbine</button>
+                <button class="mode-btn" data-mode="2">Helix</button>
+                <button class="mode-btn" data-mode="3">Heartbeat</button>
+                <button class="mode-btn" data-mode="4">Overload</button>
+                <button class="mode-btn" data-mode="5">Synthwave</button>
+                <button class="mode-btn" data-mode="6">Static</button>
+                <button class="mode-btn" data-mode="7">Standby</button>
+            </div>
+        </div>
+
+        <!-- PRESETS -->
+        <div class="panel">
+            <div class="panel-title">ARMOR PRESETS</div>
+            <div class="preset-row">
+                <button class="preset-btn" data-preset="0" style="--c:#00d9ff">Cyan</button>
+                <button class="preset-btn" data-preset="1" style="--c:#fff">Vibranium</button>
+                <button class="preset-btn" data-preset="2" style="--c:#ffaa00">Hulkbuster</button>
+                <button class="preset-btn" data-preset="3" style="--c:#ff1e00">Extremis</button>
+                <button class="preset-btn" data-preset="4" style="--c:#6f00ff">Stealth</button>
+            </div>
+        </div>
+
+        <!-- TUNING -->
+        <div class="panel">
+            <div class="panel-title">CONTROLS & COLORS</div>
+            
+            <div class="control-group">
+                <label>Brightness</label>
+                <input type="range" id="rngBright" min="5" max="255" value="180">
+            </div>
+
+            <div class="control-group">
+                <label>Speed</label>
+                <input type="range" id="rngSpeed" min="1" max="100" value="45">
+            </div>
+
+            <div class="color-row">
+                <label class="color-picker-label">Core<input type="color" id="colCore" value="#A0F5FF"></label>
+                <label class="color-picker-label">Ring<input type="color" id="colRing" value="#00AAFF"></label>
+            </div>
+        </div>
+    </main>
+
+    <script src="/app.js"></script>
+</body>
+</html>
