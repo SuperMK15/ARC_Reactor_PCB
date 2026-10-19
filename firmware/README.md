@@ -38,14 +38,12 @@ Make sure you have [PlatformIO Core](https://platformio.org/) installed in your 
 ```powershell
 cd firmware
 pio project init
-
 ```
 
 ### 2. Build and Upload LittleFS Web Assets (`data/`)
 
 ```powershell
 pio run --target uploadfs
-
 ```
 
 ### 3. Build and Flash Application Firmware
@@ -54,7 +52,6 @@ Connect your board via USB-C (`J3`) and run:
 
 ```powershell
 pio run --target upload
-
 ```
 
 ---
@@ -70,5 +67,3 @@ Clients communicate with the ESP32-C3 via WebSocket (`ws://192.168.4.1/ws`) usin
 * **Toggle Power:** `{"cmd": "setPower", "value": true/false}`
 * **Trigger Unibeam:** `{"cmd": "unibeam"}`
 * **Apply Preset:** `{"cmd": "preset", "value": <0-4>}`
-
-```
