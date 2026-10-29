@@ -28,6 +28,8 @@ Production-grade, real-time procedural animation firmware and web-based Tactical
 4. **Non-Volatile Storage (NVS) Persistence:** Automatically saves your active mode, master brightness, animation speed, and custom color selections to flash with a 1.5-second debounce timer.
 5. **Mobile Control HUD:** A fully responsive cyberpunk interface served via **LittleFS** featuring live SVG visualizer synchronization and suit armor presets (Cyan, Vibranium, Hulkbuster, Extremis, and Stealth).
 
+If the page does not load, connect to the ESP32 access point and open `http://192.168.4.1`. If the device reports that the web UI is missing (or the page returns 404), upload the `data/` files with `pio run --target uploadfs`, then reload the page.
+
 ---
 
 ## 📦 Flashing Instructions

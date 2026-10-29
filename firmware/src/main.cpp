@@ -107,7 +107,11 @@ void setup() {
     reactor.begin();
     reactor.triggerUnibeam(900);
 
-    if (!LittleFS.begin(true)) Serial.println("[ERR] LittleFS Failed");
+    if (!LittleFS.begin(true)) {
+        Serial.println("[ERR] LittleFS Failed");
+    } else if (!LittleFS.exists("/index.html")) {
+        Serial.println("[ERR] Web UI missing from LittleFS; run 'pio run --target uploadfs'");
+    }
 
     apSSID = buildDynamicSSID();
     WiFi.mode(WIFI_AP);
@@ -120,7 +124,13 @@ void setup() {
     ws.onEvent(onWsEvent);
     server.addHandler(&ws);
     server.serveStatic("/", LittleFS, "/").setDefaultFile("index.html");
-    server.onNotFound([](AsyncWebServerRequest *req) { req->redirect("http://192.168.4.1/"); });
+    server.onNotFound([](AsyncWebServerRequest *req) {
+        if (req->url() == "/") {
+            req->send(404, "text/plain", "Web UI not found. Upload the LittleFS assets with 'pio run --target uploadfs'.");
+            return;
+        }
+        req->redirect("http://192.168.4.1/");
+    });
     server.begin();
 }
 
