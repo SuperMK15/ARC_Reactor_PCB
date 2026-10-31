@@ -22,6 +22,9 @@ ReactorFX::ReactorFX()
 void ReactorFX::begin() {
     loadFromNVS();
     _strip.begin();
+    for (uint8_t i = 0; i < NUM_LEDS_TOTAL; i++) {
+        _pixelBuffer[i] = {0, 0, 0};
+    }
     _strip.setBrightness(_state.brightness);
     _strip.clear();
     _strip.show();
@@ -291,7 +294,10 @@ RGBColor ReactorFX::wheel(uint8_t pos) {
 
 void ReactorFX::getPixelHexArray(String* outHexArray) const {
     char buf[8];
-    float masterScale = (!_state.powerOn && !_state.unibeamActive) ? 0.0f : 1.0f;
+    uint8_t brightness = _state.unibeamActive ? 255 : _state.brightness;
+    float masterScale = (!_state.powerOn && !_state.unibeamActive)
+        ? 0.0f
+        : (brightness == 255 ? 1.0f : (brightness + 1) / 256.0f);
     for (uint8_t i = 0; i < NUM_LEDS_TOTAL; i++) {
         uint8_t r = (uint8_t)(_pixelBuffer[i].r * masterScale);
         uint8_t g = (uint8_t)(_pixelBuffer[i].g * masterScale);

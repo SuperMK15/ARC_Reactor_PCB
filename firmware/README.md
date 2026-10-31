@@ -26,7 +26,7 @@ Production-grade, real-time procedural animation firmware and web-based Tactical
    * *Synthwave Spectrum* (Smooth hue shifting)
 3. **Unibeam Overdrive Mode:** Triggers a blinding maximum-power flash sequence across all 9 LEDs with a single tap from the web HUD.
 4. **Non-Volatile Storage (NVS) Persistence:** Automatically saves your active mode, master brightness, animation speed, and custom color selections to flash with a 1.5-second debounce timer.
-5. **Mobile Control HUD:** A fully responsive cyberpunk interface served via **LittleFS** featuring live SVG visualizer synchronization and suit armor presets (Cyan, Vibranium, Hulkbuster, Extremis, and Stealth).
+5. **Mobile Control HUD:** A fully responsive cyberpunk interface served via **LittleFS** featuring live SVG visualizer synchronization, suit armor presets (Cyan, Vibranium, Hulkbuster, Extremis, and Stealth), and an approximate LED current estimate (20 mA per color channel; MCU current excluded).
 
 If the page does not load, connect to the ESP32 access point and open `http://192.168.4.1`. If the device reports that the web UI is missing (or the page returns 404), upload the `data/` files with `pio run --target uploadfs`, then reload the page.
 

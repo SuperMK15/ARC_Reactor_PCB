@@ -2,94 +2,140 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>ARC REACTOR HUD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#070c13">
+    <title>ARC Reactor | Control</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <header class="hud-header">
-        <h1>ARC REACTOR</h1>
-        <span class="status-badge" id="connText">LINKING</span>
+        <div class="brand-lockup">
+            <div>
+                <p class="eyebrow">ESP32-C3 <span>/</span> LIVE CONTROL</p>
+                <h1>ARC REACTOR</h1>
+            </div>
+        </div>
+        <span class="status-badge" id="connText" data-state="connecting">
+            <span class="status-dot" aria-hidden="true"></span>
+            CONNECTING
+        </span>
     </header>
 
     <main class="hud-container">
-        <!-- VISUALIZER WITH SPINNING RETICLES -->
-        <div class="panel center-panel">
-            <div class="reactor-wrap">
-                <svg viewBox="0 0 260 260" class="reactor-svg">
-                    <circle cx="130" cy="130" r="118" class="reticle-outer" />
-                    <circle cx="130" cy="130" r="96" class="reticle-mid" />
-                    <circle cx="130" cy="130" r="50" class="reticle-inner" />
-                    
-                    <!-- Outer 8 LEDs (D4 to D11) -->
-                    <circle id="led-1" cx="160" cy="58" r="10" class="led" />
-                    <circle id="led-2" cx="202" cy="100" r="10" class="led" />
-                    <circle id="led-3" cx="202" cy="160" r="10" class="led" />
-                    <circle id="led-4" cx="160" cy="202" r="10" class="led" />
-                    <circle id="led-5" cx="100" cy="202" r="10" class="led" />
-                    <circle id="led-6" cx="58" cy="160" r="10" class="led" />
-                    <circle id="led-7" cx="58" cy="100" r="10" class="led" />
-                    <circle id="led-8" cx="100" cy="58" r="10" class="led" />
-                    
-                    <!-- Center Core LED (D3) -->
-                    <circle id="led-0" cx="130" cy="130" r="22" class="led core" />
-                </svg>
+        <section class="panel center-panel" aria-labelledby="reactorTitle">
+            <div class="panel-heading">
+                <div>
+                    <p class="eyebrow">SYSTEM TELEMETRY</p>
+                    <h2 id="reactorTitle">Reactor Status</h2>
+                </div>
+                <span class="live-tag"><span></span> LIVE</span>
+            </div>
+
+            <div class="reactor-stage">
+                <div class="reactor-wrap">
+                    <svg viewBox="0 0 260 260" class="reactor-svg" role="img" aria-label="Live visualization of the nine reactor LEDs">
+                        <circle cx="130" cy="130" r="118" class="reticle-outer" />
+                        <circle cx="130" cy="130" r="96" class="reticle-mid" />
+                        <circle cx="130" cy="130" r="70" class="reticle-guide" />
+                        <circle cx="130" cy="130" r="48" class="reticle-inner" />
+                        <circle id="led-1" cx="160" cy="58" r="9" class="led" />
+                        <circle id="led-2" cx="202" cy="100" r="9" class="led" />
+                        <circle id="led-3" cx="202" cy="160" r="9" class="led" />
+                        <circle id="led-4" cx="160" cy="202" r="9" class="led" />
+                        <circle id="led-5" cx="100" cy="202" r="9" class="led" />
+                        <circle id="led-6" cx="58" cy="160" r="9" class="led" />
+                        <circle id="led-7" cx="58" cy="100" r="9" class="led" />
+                        <circle id="led-8" cx="100" cy="58" r="9" class="led" />
+                        <circle id="led-0" cx="130" cy="130" r="19" class="led core" />
+                    </svg>
+                </div>
             </div>
 
             <div class="action-row">
-                <button class="btn btn-unibeam" id="btnUnibeam">⚡ UNIBEAM</button>
-                <button class="btn btn-power active" id="btnPower">PWR</button>
+                <button class="btn btn-unibeam" id="btnUnibeam" type="button"><span aria-hidden="true">⚡</span> UNIBEAM</button>
+                <button class="btn btn-power active" id="btnPower" type="button" aria-label="Turn reactor off" title="Turn reactor off">POWER <span class="power-indicator" aria-hidden="true"></span></button>
             </div>
-        </div>
 
-        <!-- MODES -->
-        <div class="panel">
-            <div class="panel-title">ANIMATION MODES</div>
+            <div class="readout-row">
+                <div class="readout">
+                    <span class="readout-label">EST. LED CURRENT</span>
+                    <strong id="currentDraw">— <small>mA</small></strong>
+                </div>
+                <div class="readout readout-right">
+                    <span class="readout-label">ACTIVE MODE</span>
+                    <strong id="activeMode">—</strong>
+                </div>
+            </div>
+            <p class="estimate-note">Approx. LED load only · 20 mA per color channel</p>
+        </section>
+
+        <section class="panel" aria-labelledby="modesTitle">
+            <div class="panel-heading">
+                <div>
+                    <p class="eyebrow">REACTOR PROFILE</p>
+                    <h2 id="modesTitle">Animation modes</h2>
+                </div>
+            </div>
             <div class="mode-grid">
-                <button class="mode-btn active" data-mode="0">Classic</button>
-                <button class="mode-btn" data-mode="1">Turbine</button>
-                <button class="mode-btn" data-mode="2">Helix</button>
-                <button class="mode-btn" data-mode="3">Heartbeat</button>
-                <button class="mode-btn" data-mode="4">Overload</button>
-                <button class="mode-btn" data-mode="5">Synthwave</button>
-                <button class="mode-btn" data-mode="6">Static</button>
-                <button class="mode-btn" data-mode="7">Standby</button>
+                <button class="mode-btn active" data-mode="0" type="button"><span class="mode-index">01</span>Classic</button>
+                <button class="mode-btn" data-mode="1" type="button"><span class="mode-index">02</span>Turbine</button>
+                <button class="mode-btn" data-mode="2" type="button"><span class="mode-index">03</span>Helix</button>
+                <button class="mode-btn" data-mode="3" type="button"><span class="mode-index">04</span>Heartbeat</button>
+                <button class="mode-btn" data-mode="4" type="button"><span class="mode-index">05</span>Overload</button>
+                <button class="mode-btn" data-mode="5" type="button"><span class="mode-index">06</span>Synthwave</button>
+                <button class="mode-btn" data-mode="6" type="button"><span class="mode-index">07</span>Static</button>
+                <button class="mode-btn" data-mode="7" type="button"><span class="mode-index">08</span>Standby</button>
             </div>
-        </div>
+        </section>
 
-        <!-- PRESETS -->
-        <div class="panel">
-            <div class="panel-title">ARMOR PRESETS</div>
+        <section class="panel" aria-labelledby="presetsTitle">
+            <div class="panel-heading">
+                <div>
+                    <p class="eyebrow">QUICK CONFIG</p>
+                    <h2 id="presetsTitle">Armor presets</h2>
+                </div>
+            </div>
             <div class="preset-row">
-                <button class="preset-btn" data-preset="0" style="--c:#00d9ff">Cyan</button>
-                <button class="preset-btn" data-preset="1" style="--c:#fff">Vibranium</button>
-                <button class="preset-btn" data-preset="2" style="--c:#ffaa00">Hulkbuster</button>
-                <button class="preset-btn" data-preset="3" style="--c:#ff1e00">Extremis</button>
-                <button class="preset-btn" data-preset="4" style="--c:#6f00ff">Stealth</button>
+                <button class="preset-btn" data-preset="0" style="--preset-color:#00d9ff" type="button"><span></span>Cyan</button>
+                <button class="preset-btn" data-preset="1" style="--preset-color:#fff" type="button"><span></span>Vibranium</button>
+                <button class="preset-btn" data-preset="2" style="--preset-color:#ffaa00" type="button"><span></span>Hulkbuster</button>
+                <button class="preset-btn" data-preset="3" style="--preset-color:#ff1e00" type="button"><span></span>Extremis</button>
+                <button class="preset-btn" data-preset="4" style="--preset-color:#6f00ff" type="button"><span></span>Stealth</button>
             </div>
-        </div>
+        </section>
 
-        <!-- TUNING -->
-        <div class="panel">
-            <div class="panel-title">CONTROLS & COLORS</div>
-            
+        <section class="panel" aria-labelledby="controlsTitle">
+            <div class="panel-heading">
+                <div>
+                    <p class="eyebrow">FINE TUNING</p>
+                    <h2 id="controlsTitle">Output controls</h2>
+                </div>
+            </div>
+
             <div class="control-group">
-                <label>Brightness</label>
+                <div class="range-heading">
+                    <label for="rngBright">Master brightness</label>
+                    <output id="brightnessValue" for="rngBright">180 <small>/ 255</small></output>
+                </div>
                 <input type="range" id="rngBright" min="5" max="255" value="180">
+                <div class="range-scale"><span>5</span><span>100% output</span><span>255</span></div>
             </div>
 
             <div class="control-group">
-                <label>Speed</label>
+                <div class="range-heading">
+                    <label for="rngSpeed">Animation speed</label>
+                    <output id="speedValue" for="rngSpeed">45 <small>/ 100</small></output>
+                </div>
                 <input type="range" id="rngSpeed" min="1" max="100" value="45">
             </div>
 
             <div class="color-row">
-                <label class="color-picker-label">Core<input type="color" id="colCore" value="#A0F5FF"></label>
-                <label class="color-picker-label">Ring<input type="color" id="colRing" value="#00AAFF"></label>
+                <label class="color-picker-label" for="colCore"><span>CORE COLOR</span><input type="color" id="colCore" value="#A0F5FF"></label>
+                <label class="color-picker-label" for="colRing"><span>RING COLOR</span><input type="color" id="colRing" value="#00AAFF"></label>
             </div>
-        </div>
+        </section>
     </main>
 
-    <script src="/app.js"></script>
+    <script src="/app.js" defer></script>
 </body>
 </html>

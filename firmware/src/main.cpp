@@ -13,6 +13,7 @@ AsyncWebSocket ws("/ws");
 ReactorFX reactor;
 
 String apSSID;
+uint32_t lastTelemetryMs = 0;
 
 String buildDynamicSSID() {
     uint64_t chipid = ESP.getEfuseMac();
@@ -138,4 +139,10 @@ void loop() {
     dnsServer.processNextRequest();
     ws.cleanupClients();
     reactor.update();
+
+    uint32_t now = millis();
+    if (now - lastTelemetryMs >= TELEMETRY_RATE_MS) {
+        lastTelemetryMs = now;
+        broadcastState();
+    }
 }
