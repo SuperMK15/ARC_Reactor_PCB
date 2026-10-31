@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include <WiFi.h>
+#include <ArduinoOTA.h>
 #include <DNSServer.h>
 #include <LittleFS.h>
 #include <ESPAsyncWebServer.h>
@@ -121,6 +122,19 @@ void setup() {
     WiFi.softAP(apSSID.c_str(), AP_PASS, AP_CHANNEL, 0, AP_MAX_CONN);
     WiFi.setTxPower(WIFI_POWER_15dBm);
 
+    ArduinoOTA.setHostname("arc-reactor");
+    ArduinoOTA.setPassword(AP_PASS);
+    ArduinoOTA.onStart([]() {
+        Serial.println("[OTA] Update started");
+    });
+    ArduinoOTA.onEnd([]() {
+        Serial.println("\n[OTA] Update complete; restarting");
+    });
+    ArduinoOTA.onError([](ota_error_t error) {
+        Serial.printf("[OTA] Update failed (error %u)\n", error);
+    });
+    ArduinoOTA.begin();
+
     dnsServer.start(53, "*", ip);
     ws.onEvent(onWsEvent);
     server.addHandler(&ws);
@@ -136,6 +150,7 @@ void setup() {
 }
 
 void loop() {
+    ArduinoOTA.handle();
     dnsServer.processNextRequest();
     ws.cleanupClients();
     reactor.update();

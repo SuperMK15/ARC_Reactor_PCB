@@ -56,6 +56,24 @@ Connect your board via USB-C (`J3`) and run:
 pio run --target upload
 ```
 
+### 4. Upload Firmware Over Wi-Fi
+
+The first firmware upload must be done over USB to install the OTA listener. For later firmware updates, connect your computer to the ESP32's `ARC_REACTOR_<UUID>` Wi-Fi network (password: `iamironman`), then run from the `firmware/` directory:
+
+```powershell
+pio run -e esp32-c3-ota --target upload
+```
+
+PlatformIO uploads to `192.168.4.1` and authenticates using the AP password. The ESP32 must be powered and running, and your computer must stay connected to its Wi-Fi network during the upload. The regular `esp32-c3-devkitm-1` environment remains available for USB uploads.
+
+To upload updated LittleFS web assets over Wi-Fi, use:
+
+```powershell
+pio run -e esp32-c3-ota --target uploadfsota
+```
+
+This sends the filesystem image to the ESP32's data partition and reboots the board when the upload finishes. The initial OTA-enabled firmware must already be installed over USB. If OTA is unavailable, you can still upload the assets over USB with `pio run --target uploadfs`.
+
 ---
 
 ## 🎛️ API & WebSocket Commands
